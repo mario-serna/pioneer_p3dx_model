@@ -22,3 +22,16 @@ $ roslaunch p3dx_gazebo pioneer3dx.launch
 Launching Rviz
 $ roslaunch p3dx_description rviz.launch
 ```
+
+# Note:
+```
+In order to use the other included world files, it is necessary to replace the following for all the matches:
+
+Example:
+p3dx_gazebo/worlds/p3dx_map1.world
+
+<uri>/home/mario/catkin_ws/src/pioneer_p3dx_model/p3dx_description/meshes/chassis.stl</uri>
+=>
+<uri>/home/<username>/<catkin_ws_name></catkin_ws_>/src/pioneer_p3dx_model/p3dx_description/meshes/chassis.stl</uri>
+
+```

@@ -7,7 +7,7 @@
 	<arg name="gui" default="true" />
 	<arg name="headless" default="false" />
 	<arg name="debug" default="false" />
-        <arg name="world" default="p3dx_imp" />
+        <arg name="world" default="p3dx" />
 
 	<!-- We resume the logic in empty_world.launch, changing only the name of 
 		the world to be launched -->
