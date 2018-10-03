@@ -84,3 +84,6 @@ include_directories(
 # target_link_libraries(p3dx_control_node
 #   ${catkin_LIBRARIES}
 # )
+
+add_executable(mover mover.cpp)
+target_link_libraries(mover ${catkin_LIBRARIES})
