@@ -127,7 +127,7 @@ work original in ucs-ros-pkg.
       </ray>
       <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_head_hokuyo_controller">
         <topicName>p3dx/laser/scan</topicName>
-        <frameName>odom</frameName>
+        <frameName>lms100</frameName>
       </plugin>
     </sensor>
   </gazebo>
