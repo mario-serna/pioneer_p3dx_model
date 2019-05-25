@@ -73,7 +73,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			<wheelTorque>5</wheelTorque>
 			<rosDebugLevel>na</rosDebugLevel>
 			<publishTf>1</publishTf>
-			<legacyMode>true</legacyMode>
+			<legacyMode>false</legacyMode>
 		</plugin>
 	</gazebo>
 	<!-- ground truth -->
