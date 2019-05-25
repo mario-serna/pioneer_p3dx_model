@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
     <!-- Include empty world -->
-    <arg name="ns" default="/p3dx"/>
+    <arg name="ns" default="p3dx"/>
     <arg name="x" default="0.0" />
     <arg name="y" default="0.0" />
     <arg name="z" default="0.0" />

@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	<!-- ros_control plugin -->
 	<gazebo>
 		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-			<robotNamespace>/${ns}</robotNamespace>
+			<!--<robotNamespace>/${ns}</robotNamespace>-->
 		</plugin>
 	</gazebo>
 	<!-- base_link -->
@@ -72,8 +72,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			<wheelAcceleration>0</wheelAcceleration>
 			<wheelTorque>5</wheelTorque>
 			<rosDebugLevel>na</rosDebugLevel>
-			<legacyMode>true</legacyMode>
 			<publishTf>1</publishTf>
+			<legacyMode>true</legacyMode>
 		</plugin>
 	</gazebo>
 	<!-- ground truth -->
@@ -82,7 +82,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			<alwaysOn>true</alwaysOn>
 			<updateRate>100.0</updateRate>
 			<bodyName>base_link</bodyName>
-			<topicName>${ns}/base_pose_ground_truth</topicName>
+			<topicName>base_pose_ground_truth</topicName>
 			<gaussianNoise>0.01</gaussianNoise>
 			<frameName>map</frameName>
 			<!-- initialize odometry for fake localization -->
@@ -120,7 +120,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 				</noise>
 			</ray>
 			<plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-				<topicName>${ns}/laser/scan</topicName>
+				<topicName>laser/scan</topicName>
 				<frameName>lms100</frameName>
 			</plugin>
 		</sensor>

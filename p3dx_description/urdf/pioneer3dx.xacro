@@ -159,8 +159,14 @@ work original in ucs-ros-pkg.
 		<parent link="center_wheel"/>
 		<child link="center_hubcap"/>
 	</joint>
-	<xacro:p3dx_wheel suffix="left" parent="base_link" reflect="1"/>
-	<xacro:p3dx_wheel suffix="right" parent="base_link" reflect="-1"/>
+	<!-- End of Legacy for diff drive plugin
+	https://github.com/ros-simulation/gazebo_ros_pkgs/pull/707/files
+	"This setting assumes you have a old package, where the right and left wheel are changed to fix a former code issue\n"
+	"To get rid of this error just set <legacyMode> to false if you just created a new package.\n"
+	"To fix an old package you have to exchange left wheel by the right wheel.\n"
+	-->
+	<xacro:p3dx_wheel suffix="left" parent="base_link" reflect="-1"/>
+	<xacro:p3dx_wheel suffix="right" parent="base_link" reflect="1"/>
 	<!-- front_sonar -->
 	<link name="front_sonar">
 		<inertial>
