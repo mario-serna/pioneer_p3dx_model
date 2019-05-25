@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <arg name="pos_x" default="0.0"/>
+    <arg name="pos_y" default="0.0"/>
+    <arg name="pos_z" default="0.0"/>
+    <arg name="name" default="p3dx"/>
+    <arg name="namespace_arg" default=""/>
+
+    <arg name="robot_model" default="$(find p3dx_description)/urdf/pioneer3dx.xacro"/>
+    <param name="robot_description" command="$(find xacro)/xacro '$(arg robot_model)'" />
+
+    <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf 
+                -param robot_description 
+                -model $(arg name)
+                -robot_namespace $(arg namespace_arg)
+                -x $(arg pos_x) 
+                -y $(arg pos_y) 
+                -z $(arg pos_z)" />
+
+</launch>

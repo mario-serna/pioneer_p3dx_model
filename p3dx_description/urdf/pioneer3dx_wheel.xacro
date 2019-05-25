@@ -19,8 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 This project is based on work by Tracy Davies, where it was in turn based on
 work original in ucs-ros-pkg.
  -->
-<robot 
-	xmlns:xacro="http://ros.org/wiki/xacro">
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
 	<!-- properties (constants) -->
 	<xacro:property name="M_PI" value="3.14159" />
 	<!-- right/left hubcap + wheel -->
@@ -85,7 +84,9 @@ work original in ucs-ros-pkg.
 		<!-- gazebo elements -->
 		<transmission name="${parent}_${suffix}_wheel_trans">
 			<type>pr2_mechanism_model/SimpleTransmission</type>
-			<joint name="base_${suffix}_wheel_joint" />
+			<joint name="base_${suffix}_wheel_joint">
+				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+			</joint>
 			<actuator name="base_${suffix}_wheel_motor">
 				<hardwareInterface>EffortJointInterface</hardwareInterface>
 				<mechanicalReduction>${reflect * 624/35 * 80/19}</mechanicalReduction>

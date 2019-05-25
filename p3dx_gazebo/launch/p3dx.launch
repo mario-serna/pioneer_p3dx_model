@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- Include empty world -->
+    <arg name="ns" default="/p3dx"/>
+    <arg name="x" default="0.0" />
+    <arg name="y" default="0.0" />
+    <arg name="z" default="0.0" />
+
+    <arg name="robot_model" default="$(find p3dx_description)/urdf/pioneer3dx.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro '$(arg robot_model)'" />
+
+    <!-- Spawn robot-->
+    <group ns="$(arg ns)">
+        <include file="$(find p3dx_gazebo)/launch/spawn.launch">
+            <arg name="name" value="$(arg ns)" />
+            <arg name="pos_x" value="$(arg x)" />
+            <arg name="pos_y" value="$(arg y)" />
+            <arg name="pos_z" value="$(arg z)" />
+            <arg name="namespace_arg" value="$(arg ns)" />
+        </include>
+    </group>
+</launch>

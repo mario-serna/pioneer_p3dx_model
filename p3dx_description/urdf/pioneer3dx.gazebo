@@ -67,7 +67,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			<odometryTopic>odom</odometryTopic>
 			<odometryFrame>odom</odometryFrame>
 			<robotBaseFrame>base_link</robotBaseFrame>
-			<robotNamespace>/</robotNamespace>
 			<publishWheelTF>true</publishWheelTF>
 			<publishWheelJointState>true</publishWheelJointState>
 			<wheelAcceleration>0</wheelAcceleration>
@@ -95,7 +94,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	<gazebo reference="lms100">
 		<sensor type="ray" name="head_hokuyo_sensor">
 			<pose>0 0 0 0 0 0</pose>
-                        <visualize>true</visualize>
+			<visualize>true</visualize>
 			<update_rate>50</update_rate>
 			<ray>
 				<scan>
@@ -122,7 +121,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			</ray>
 			<plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
 				<topicName>${ns}/laser/scan</topicName>
-                                <frameName>lms100</frameName>
+				<frameName>lms100</frameName>
 			</plugin>
 		</sensor>
 	</gazebo>
