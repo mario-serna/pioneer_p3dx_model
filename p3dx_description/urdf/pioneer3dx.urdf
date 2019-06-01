@@ -27,7 +27,6 @@ work original in ucs-ros-pkg.
   <!-- ros_control plugin -->
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-      <robotNamespace>/p3dx</robotNamespace>
     </plugin>
   </gazebo>
   <!-- base_link -->
@@ -72,7 +71,6 @@ work original in ucs-ros-pkg.
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
       <robotBaseFrame>base_link</robotBaseFrame>
-      <robotNamespace>/</robotNamespace>
       <publishWheelTF>true</publishWheelTF>
       <publishWheelJointState>true</publishWheelJointState>
       <wheelAcceleration>0</wheelAcceleration>

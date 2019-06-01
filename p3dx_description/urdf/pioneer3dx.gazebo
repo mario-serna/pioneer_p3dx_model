@@ -80,7 +80,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	<gazebo>
 		<plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
 			<alwaysOn>true</alwaysOn>
-			<updateRate>100.0</updateRate>
+			<updateRate>30.0</updateRate>
 			<bodyName>base_link</bodyName>
 			<topicName>base_pose_ground_truth</topicName>
 			<gaussianNoise>0.01</gaussianNoise>
